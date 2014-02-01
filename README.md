@@ -13,7 +13,7 @@ This projects helps integrate Facebook album into your Django CMS based website.
 Add the following line into your `requirements.txt` file:
 
 ```bash
-https://github.com/changer/django-fbgallery/archive/v1.0.0.zip
+https://github.com/changer/cmsplugin-fbgallery/archive/v1.0.0.zip
 ```
 And add the page id in your settings file:
 
