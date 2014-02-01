@@ -1,4 +1,7 @@
 *.log
 *.pot
 *.pyc
+build
+dist
+cmsplugin_fbgallery.egg-info/
 local_settings.py
