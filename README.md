@@ -1,6 +1,8 @@
 cmsplugin-fbgallery
 ===================
 
+[![Build Status](https://travis-ci.org/changer/cmsplugin-fbgallery.png?branch=master)](https://travis-ci.org/changer/cmsplugin-fbgallery)
+
 Django CMS plugin for facebook album gallery
 
 This projects helps integrate Facebook album into your Django CMS based website. The plugin provide superb performance compared to the Ajax based alternatives and works even on IE > 6 without any issues. Also, with caching enabled it loads fast without any lag.
