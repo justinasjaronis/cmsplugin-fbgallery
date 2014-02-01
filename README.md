@@ -45,9 +45,9 @@ If URL is: https://www.facebook.com/media/set/?set=a.369541803149826.1073741825.
 
 It can be easily broken down into :
 
-https://www.facebook.com/media/set/?set=a.369541803149826.<album_info>.<page_id>&type=3
+https://www.facebook.com/media/set/?set=a.369541803149826. <album_info> . <page_id> &type=3
 
-The album id which you should enter in the plugin is: <page_id>_<album_info>
+The album id which you should enter in the plugin is: <page_id> _ <album_info>
 
 which means: 125976107506398_1073741825 .
 
