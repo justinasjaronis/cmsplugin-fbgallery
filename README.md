@@ -8,8 +8,10 @@ This projects helps integrate Facebook album into your Django CMS based website.
 
 ## Installation:
 
-```bash
+Add the following line into your `requirements.txt` file:
 
+```bash
+https://github.com/changer/django-fbgallery/archive/v1.0.0.zip
 ```
 And add the page id in your settings file:
 
@@ -19,6 +21,7 @@ INSTALLED_APPS = (
                   )
                   
 FB_PAGE_ID = '125976107506398'# Get the page Id from facebook album you want to use.
+# It is usually the page_id part of the album URL. https://www.facebook.com/media/set/?set=a.369541803149826.<album_info>.<page_id>&type=3 
 
 ```
 
@@ -27,14 +30,38 @@ Once, done add a block into the django template where you want to use the plugin
 base.html:
 
 ```html
-
+{% placeholder facebook-gallery %}
 ```
 
-## Bugs/Issues
+## Usage:
+
+In order to use, add the plugin into the intended placeholder and add facebook album Id and Album name in the admin and save the plugin and page. Once done, you will have the gallery up and running for you. 
+
+### Finding Album ID:
+
+A facebook Album URL contains the information about the Page ID and Album ID, Here is how you calculate the Album ID:
+
+If URL is: https://www.facebook.com/media/set/?set=a.369541803149826.1073741825.125976107506398&type=3
+
+It can be easily broken down into :
+
+https://www.facebook.com/media/set/?set=a.369541803149826.<album_info>.<page_id>&type=3
+
+The album id which you should enter in the plugin is: <page_id>_<album_info>
+
+which means: 125976107506398_1073741825 .
+
+Once you find album id of one album, find others is as easy as increasing the count by 1, as facebook assign new album to you adding one at a time. So if you have another album, its album id must be 125976107506398_1073741826.
+
+## Scope:
+
+The future versions with bring in more cleanup and fixes to the plugin.
+
+## Bugs/Issues:
 
 Create an issue here with proper detail: https://github.com/changer/cmsplugin-fbgallery/issues 
 
 
-## Inspirations/Credits
+## Inspirations/Credits:
 
-This projects is inspired by the work of [@dantium](https://github.com/dantium) and [@driesdesmet](https://github.com/driesdesmet). 
+This projects seeks some inspirations from the work of [@dantium](https://github.com/dantium) and [@driesdesmet](https://github.com/driesdesmet) on django-fbgallery but adapts it to more CMS plugin way.
