@@ -21,7 +21,8 @@ INSTALLED_APPS = (
                   )
                   
 FB_PAGE_ID = '125976107506398'# Get the page Id from facebook album you want to use.
-# It is usually the page_id part of the album URL. https://www.facebook.com/media/set/?set=a.369541803149826.<album_info>.<page_id>&type=3 
+# It is usually the page_id part of the album URL. 
+https://www.facebook.com/media/set/?set=a.369541803149826.<album_info>.<page_id>&type=3 
 
 ```
 
@@ -43,15 +44,9 @@ A facebook Album URL contains the information about the Page ID and Album ID, He
 
 If URL is: https://www.facebook.com/media/set/?set=a.369541803149826.1073741825.125976107506398&type=3
 
-It can be easily broken down into :
+Your Album ID is: 125976107506398_1073741825 .
 
-https://www.facebook.com/media/set/?set=a.369541803149826. <album_info> . <page_id> &type=3
-
-The album id which you should enter in the plugin is: <page_id> _ <album_info>
-
-which means: 125976107506398_1073741825 .
-
-Once you find album id of one album, find others is as easy as increasing the count by 1, as facebook assign new album to you adding one at a time. So if you have another album, its album id must be 125976107506398_1073741826.
+Once you find album id of one album, find others is as easy as increasing the count by 1, as facebook assign new album by adding one at a time. So if you have another album, its album id must be 125976107506398_1073741826.
 
 ## Scope:
 
