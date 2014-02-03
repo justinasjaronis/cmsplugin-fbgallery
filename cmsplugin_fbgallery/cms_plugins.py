@@ -3,11 +3,11 @@ from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 from facebook import display_album
 
-from models import Facebook
+from models import FacebookGallery
 
-class FacebookPlugin(CMSPluginBase):
-    model = Facebook
-    name = _("Facebook Album")
+class FacebookGalleryPlugin(CMSPluginBase):
+    model = FacebookGallery
+    name = _("Facebook Album Gallery")
     render_template = "cmsplugin_fbgallery/album.html"
 
     def render(self, context, instance, placeholder):
@@ -18,4 +18,4 @@ class FacebookPlugin(CMSPluginBase):
           })
         return context
 
-plugin_pool.register_plugin(FacebookPlugin)
+plugin_pool.register_plugin(FacebookGalleryPlugin)

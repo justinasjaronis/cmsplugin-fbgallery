@@ -1,3 +1,2 @@
 recursive-include cmsplugin_fbgallery/templates *
-recursive-include cmsplugin_fbgallery/migrations *
 include README.md

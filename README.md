@@ -19,7 +19,7 @@ And add the page id in your settings file:
 
 ```py
 INSTALLED_APPS = (
-                  `cmsplugin_gallery`,
+                  `cmsplugin_fbgallery`,
                   )
                   
 FB_PAGE_ID = '125976107506398'# Get the page Id from facebook album you want to use.
