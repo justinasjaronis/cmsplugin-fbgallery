@@ -8,25 +8,25 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'Facebook'
-        db.create_table('cmsplugin_facebook', (
+        # Adding model 'FacebookGallery'
+        db.create_table('cmsplugin_facebookgallery', (
             ('cmsplugin_ptr', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['cms.CMSPlugin'], unique=True, primary_key=True)),
             ('album_id', self.gf('django.db.models.fields.CharField')(max_length=500)),
             ('album_name', self.gf('django.db.models.fields.CharField')(max_length=100)),
         ))
-        db.send_create_signal('cmsplugin_fbgallery', ['Facebook'])
+        db.send_create_signal('cmsplugin_fbgallery', ['FacebookGallery'])
 
 
     def backwards(self, orm):
-        # Deleting model 'Facebook'
-        db.delete_table('cmsplugin_facebook')
+        # Deleting model 'FacebookGallery'
+        db.delete_table('cmsplugin_facebookgallery')
 
 
     models = {
         'cms.cmsplugin': {
             'Meta': {'object_name': 'CMSPlugin'},
             'changed_date': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
-            'creation_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2014, 1, 31, 0, 0)'}),
+            'creation_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2014, 2, 3, 0, 0)'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'language': ('django.db.models.fields.CharField', [], {'max_length': '15', 'db_index': 'True'}),
             'level': ('django.db.models.fields.PositiveIntegerField', [], {'db_index': 'True'}),
@@ -44,8 +44,8 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'slot': ('django.db.models.fields.CharField', [], {'max_length': '50', 'db_index': 'True'})
         },
-        'cmsplugin_fbgallery.facebook': {
-            'Meta': {'object_name': 'Facebook', 'db_table': "'cmsplugin_facebook'", '_ormbases': ['cms.CMSPlugin']},
+        'cmsplugin_fbgallery.facebookgallery': {
+            'Meta': {'object_name': 'FacebookGallery', 'db_table': "'cmsplugin_facebookgallery'", '_ormbases': ['cms.CMSPlugin']},
             'album_id': ('django.db.models.fields.CharField', [], {'max_length': '500'}),
             'album_name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'cmsplugin_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['cms.CMSPlugin']", 'unique': 'True', 'primary_key': 'True'})
