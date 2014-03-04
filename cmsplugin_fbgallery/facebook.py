@@ -13,14 +13,14 @@ def get_fql_result(fql):
     data = None
     if cache_expires > 0:
         data = cache.get(cachename)
-    if data == None: 
+    if data is None:
         options = {
             'query':fql,
             'format':'json',
         }
         f = urllib2.urlopen(urllib2.Request(fql_url, urllib.urlencode(options)))
         response = f.read()
-        f.close()  
+        f.close()
         data = json.loads(response)
         if cache_expires > 0:
             cache.set(cachename, data, cache_expires*60)
@@ -37,5 +37,5 @@ def display_album(album_id):
     if valid_album:
         fql = "select pid, src, src_small, src_big, caption from photo where aid = '%s'  order by created desc" % album_id
         album = get_fql_result(fql)
-        #album_detail = [item for item in valid_album]       
+        #album_detail = [item for item in valid_album]
         return album
