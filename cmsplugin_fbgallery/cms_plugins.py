@@ -5,6 +5,7 @@ from facebook import display_album
 
 from models import FacebookGallery
 
+
 class FacebookGalleryPlugin(CMSPluginBase):
     model = FacebookGallery
     name = _("Facebook Album Gallery")
@@ -13,9 +14,9 @@ class FacebookGalleryPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         album = display_album(instance.album_id)
         context.update({
-          'object': instance,
-          'album': album,
-          })
+            'object': instance,
+            'album': album,
+        })
         return context
 
 plugin_pool.register_plugin(FacebookGalleryPlugin)

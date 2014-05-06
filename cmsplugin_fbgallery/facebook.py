@@ -1,12 +1,14 @@
 from django.conf import settings
 from django.core.cache import cache
-import urllib2, urllib
+import urllib2
+import urllib
 import django.utils.simplejson as json
 from django.template import defaultfilters
 
 
 fql_url = 'https://api.facebook.com/method/fql.query'
 cache_expires = getattr(settings, 'CACHE_EXPIRES', 30)
+
 
 def get_fql_result(fql):
     cachename = 'fbgallery_cache_' + defaultfilters.slugify(fql)
@@ -15,8 +17,8 @@ def get_fql_result(fql):
         data = cache.get(cachename)
     if data is None:
         options = {
-            'query':fql,
-            'format':'json',
+            'query': fql,
+            'format': 'json',
         }
         f = urllib2.urlopen(urllib2.Request(fql_url, urllib.urlencode(options)))
         response = f.read()
@@ -25,6 +27,7 @@ def get_fql_result(fql):
         if cache_expires > 0:
             cache.set(cachename, data, cache_expires*60)
     return data
+
 
 def display_album(album_id):
     """Display a facebook album
