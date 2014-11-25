@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/changer/cmsplugin-fbgallery.png?label=ready&title=Ready)](https://waffle.io/changer/cmsplugin-fbgallery)
 cmsplugin-fbgallery
 ===================
 
